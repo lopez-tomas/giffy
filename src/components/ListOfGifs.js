@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import getGifs from '../services/getGifs'
+
 import Gif from './Gif'
 
-const LisitOfGifs = ({ gifs }) => {
+const ListOfGifs = ({ keyword, limit }) => {
+  const [gifs, setGifs] = useState([])
+
+  useEffect(() => {
+    getGifs({ keyword: keyword, limit: limit }).then(gifs => setGifs(gifs))
+  }, [])
+
 	return gifs.map(({id, title, url}) =>
     <Gif
       key={id}
@@ -11,4 +19,4 @@ const LisitOfGifs = ({ gifs }) => {
   )
 }
 
-export default LisitOfGifs
+export default ListOfGifs
