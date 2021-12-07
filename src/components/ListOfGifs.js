@@ -13,6 +13,7 @@ const ListOfGifs = ({ keyword, limit }) => {
 	return gifs.map(({id, title, url}) =>
     <Gif
       key={id}
+      id={id}
       title={title}
     	url={url}
     />
