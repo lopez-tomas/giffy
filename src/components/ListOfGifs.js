@@ -7,7 +7,7 @@ const ListOfGifs = ({ keyword, limit }) => {
   const [gifs, setGifs] = useState([])
 
   useEffect(() => {
-    getGifs({ keyword: keyword, limit: limit }).then(gifs => setGifs(gifs))
+    getGifs({ keyword, limit }).then(gifs => setGifs(gifs))
   }, [])
 
 	return gifs.map(({id, title, url}) =>
