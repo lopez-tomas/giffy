@@ -8,7 +8,7 @@ const ListOfGifs = ({ keyword, limit }) => {
 
   useEffect(() => {
     getGifs({ keyword, limit }).then(gifs => setGifs(gifs))
-  }, [])
+  }, [keyword, limit])
 
 	return gifs.map(({id, title, url}) =>
     <Gif
