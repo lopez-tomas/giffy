@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Route } from 'wouter'
 import ListOfGifs from './components/ListOfGifs'
 import './App.css';
 
@@ -9,7 +10,11 @@ function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <ListOfGifs keyword={keyword} limit={limit} />
+        <h1>App</h1>
+        <Route
+          path="/gif/:keyword"
+          component={ListOfGifs}
+        />
       </section>
     </div>
   );
