@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'wouter'
+
+import ListOfGifs from '../../components/ListOfGifs/index'
+import useGifs from '../../hooks/useGifs'
 
 const POPULAR_GIFS = ["Matrix", "Rick", "Morty", "Argentina"]
 
 const Home = () => {
 	const [keyword, setKeyword] = useState('')
 	const [path, pushLocation] = useLocation()
+
+	const { loading, gifs } = useGifs()
 
 	const handleSubmit = e => {
 		e.preventDefault()
@@ -22,9 +27,10 @@ const Home = () => {
 				<input onChange={handleChange} type="text" value={keyword} placeholder="Search a GIF here" />
 				<button>Search</button>
 			</form>
+			<h3 className="App-title">Last search</h3>
+			<ListOfGifs gifs={gifs} />
 
 			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>	
-
 			<ul>
 				{POPULAR_GIFS.map((popularGif) => (
 					<li key={popularGif}>
