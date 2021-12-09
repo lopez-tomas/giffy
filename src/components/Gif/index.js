@@ -5,9 +5,11 @@ import './styles.css'
 const Gif = ({ id, title, url }) => {
 	return (
     <div className="Gif">
+      <div className="Gif-buttons">
+      </div>
       <Link to={`/gif/${id}`} className="Gif-link">
         <h4>{title}</h4>
-        <img src={url} alt={title} />
+        <img loading="lazy" src={url} alt={title} />
       </Link>
     </div>
 	)
