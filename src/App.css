@@ -2,8 +2,9 @@
   text-align: center;
 }
 
+/*background-color: #282c34;*/
 .App-content {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,4 +22,17 @@ button {
 a {
   color: #09f;
   font-size: 32px;
+}
+
+.App-logo {
+  height: 300px;
+  width: 300px;
+}
+
+.App-title {
+  color: #282c34;
+}
+
+.App-title span {
+  color: #ff13a7;
 }
