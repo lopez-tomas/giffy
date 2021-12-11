@@ -1,3 +1,12 @@
+# Idea and development of this project is from a YouTuber called midudev
+## His content is amazing and is available in Spanish! 
+
+I'm learning a lot about React thanks to him. Project structure, components and some styles are from its repository. <br /> <br />
+Link to his GitHub profile: https://github.com/midudev <br />
+Link to his repository project: https://github.com/midudev/react-live-coding <br />
+Link to YouTube playlist: https://www.youtube.com/playlist?list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC <br /> <br /> <br />
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
