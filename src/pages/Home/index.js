@@ -27,8 +27,12 @@ const Home = () => {
 				<input onChange={handleChange} type="text" value={keyword} placeholder="Search a GIF here" />
 				<button>Search</button>
 			</form>
-			<h3 className="App-title">Last search</h3>
-			<ListOfGifs gifs={gifs} />
+			<div className="App-main">
+				<div className="App-results">
+					<h3 className="App-title">Last search</h3>
+					<ListOfGifs gifs={gifs} />
+				</div>
+			</div>
 
 			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>	
 			<ul>
