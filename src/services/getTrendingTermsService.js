@@ -2,15 +2,7 @@ import { API_KEY, API_URL } from './settings'
 
 const fromApiResponseToGifs = apiResponse => {
   const { data = [] } = apiResponse
-  if (Array.isArray(data)) {
-    const gifs = data.map(singleGif => {
-      const { id, title, images } = singleGif
-      const { url } = images.downsized_medium
-      return { id, title, url }
-    })
-    return gifs
-  }
-  return []
+  return data
 }
 
 export default async function getTrendingTerms() {
