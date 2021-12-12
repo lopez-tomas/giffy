@@ -1,11 +1,7 @@
 import { API_KEY, API_URL } from './settings'
 
-export default async function getTrendingTerms() {
-  const apiURL = `${API_URL}/trending/searches?api_key=${API_KEY}`
-
-  const response = await fetch(apiURL)
-  const {data = []} = await response.json()
-
+const fromApiResponseToGifs = apiResponse => {
+  const { data = [] } = apiResponse
   if (Array.isArray(data)) {
     const gifs = data.map(singleGif => {
       const { id, title, images } = singleGif
@@ -14,4 +10,13 @@ export default async function getTrendingTerms() {
     })
     return gifs
   }
+  return []
+}
+
+export default async function getTrendingTerms() {
+  const apiURL = `${API_URL}/trending/searches?api_key=${API_KEY}`
+
+  return fetch(apiURL)
+    .then(res => res.json())
+    .then(fromApiResponseToGifs)
 }
