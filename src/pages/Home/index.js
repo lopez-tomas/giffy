@@ -3,8 +3,7 @@ import { Link, useLocation } from 'wouter'
 
 import ListOfGifs from '../../components/ListOfGifs/index'
 import useGifs from '../../hooks/useGifs'
-
-const POPULAR_GIFS = ["Matrix", "Rick", "Morty", "Argentina"]
+import TrendingSearches from '../../components/TrendingSearches'
 
 const Home = () => {
 	const [keyword, setKeyword] = useState('')
@@ -34,14 +33,11 @@ const Home = () => {
 				</div>
 			</div>
 
+			<div className="App-category">
+				<TrendingSearches />
+			</div>
+
 			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>	
-			<ul>
-				{POPULAR_GIFS.map((popularGif) => (
-					<li key={popularGif}>
-						<Link to={`/search/${popularGif}`}>{popularGif} GIFs</Link>
-					</li>
-				))}
-			</ul>
 		</>
 	)
 }
