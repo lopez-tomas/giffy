@@ -14,7 +14,10 @@ const Detail = ({ params }) => {
 	console.log(gif)
 
 	return (
-		<Gif {...gif} />
+		<div>
+			<h3 className="App-title">{gif.title}</h3>
+			<Gif {...gif} />
+		</div>
 	)
 }
 
