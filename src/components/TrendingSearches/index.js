@@ -18,6 +18,7 @@ const TrendingSearches = () => {
 }
 
 const LazyTrending = () => {
+	let observer
 	const [show, setShow] = useState(false)
 	const ref = useRef()
 
@@ -30,13 +31,20 @@ const LazyTrending = () => {
 			}
 		}
 
-		const observer = new IntersectionObserver(onChange, {
-			rootMargin: '100px'
+		Promise.resolve(
+			typeof IntersectionObserver !== "undefined"
+				? IntersectionObserver
+				: import('intersection-observer')
+		).then(() => {
+			observer = new IntersectionObserver(onChange, {
+				rootMargin: '100px'
+			})
+
+			observer.observe(ref.current)
 		})
 
-		observer.observe(ref.current)
 
-		return () => observer.disconnect()
+		return () => observer && observer.disconnect()
 	})
 
 	return (
