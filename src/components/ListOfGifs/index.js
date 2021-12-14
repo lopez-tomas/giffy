@@ -1,7 +1,7 @@
 import React from 'react'
-import './styles.css'
+import 'components/ListOfGifs/styles.css'
 
-import Gif from '../Gif/index'
+import Gif from 'components/Gif'
 
 const ListOfGifs = ({ gifs }) => {
   return (

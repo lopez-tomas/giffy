@@ -1,7 +1,7 @@
-import useGlobalGifs from '../../hooks/useGlobalGifs'
-import './styles.css'
+import useGlobalGifs from 'hooks/useGlobalGifs'
+import 'components/Gif/styles.css'
 
-import Gif from '../../components/Gif'
+import Gif from 'components/Gif'
 
 const Detail = ({ params }) => {
 	const gifs = useGlobalGifs()

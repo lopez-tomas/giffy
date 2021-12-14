@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'wouter'
 
-import ListOfGifs from '../../components/ListOfGifs/index'
-import useGifs from '../../hooks/useGifs'
-import TrendingSearches from '../../components/TrendingSearches'
+import ListOfGifs from 'components/ListOfGifs/index'
+import useGifs from 'hooks/useGifs'
+import TrendingSearches from 'components/TrendingSearches'
 
 const Home = () => {
 	const [keyword, setKeyword] = useState('')
@@ -33,11 +33,11 @@ const Home = () => {
 				</div>
 			</div>
 
+			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>
 			<div className="App-category">
 				<TrendingSearches />
 			</div>
 
-			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>	
 		</>
 	)
 }
