@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from 'services/settings'
+import { API_KEY, API_URL } from './settings'
 
 const fromApiResponseToGifs = apiResponse => {
   const { data = [] } = apiResponse
@@ -13,9 +13,8 @@ const fromApiResponseToGifs = apiResponse => {
   return []
 }
 
-export default async function getGifs({ keyword = 'morty' } = {}) {
-  const limit = 10;
-  const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=0&rating=g&lang=en`
+export default async function getGifs({ keyword = 'morty', limit = 25, page = 0 } = {}) {
+  const apiURL = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=g&lang=en`
 
   return fetch(apiURL)
     .then(res => res.json())
