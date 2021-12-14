@@ -3,9 +3,9 @@ import { Link } from "wouter";
 import "./styles.css";
 
 export default function Category({ name, options = [] }) {
+  //<h3 className="Category-title">{name}</h3>
   return (
     <div className='Category'>
-      <h3 className="Category-title">{name}</h3>
       <ul className="Category-list">
         {options.map((singleOption) => (
           <li key={singleOption}>
