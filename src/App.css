@@ -36,3 +36,9 @@ a {
 .App-title span {
   color: #ff13a7;
 }
+
+.App-category {
+  color: #ff13a7;
+  margin-bottom: 25px;
+  width: 100%;
+}
