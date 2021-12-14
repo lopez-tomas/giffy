@@ -1,5 +1,5 @@
 import useGlobalGifs from 'hooks/useGlobalGifs'
-import 'components/Gif/styles.css'
+import './styles.css'
 
 import Gif from 'components/Gif'
 

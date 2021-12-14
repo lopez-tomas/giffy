@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 
-import "components/Category/styles.css";
+import "./styles.css";
 
 export default function Category({ name, options = [] }) {
   //<h3 className="Category-title">{name}</h3>
