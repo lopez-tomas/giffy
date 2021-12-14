@@ -33,7 +33,6 @@ const Home = () => {
 				</div>
 			</div>
 
-			<h3 className="App-title">The <span>MOST</span> popular GIFs</h3>
 			<div className="App-category">
 				<TrendingSearches />
 			</div>
