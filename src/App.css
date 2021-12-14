@@ -4,7 +4,7 @@
 
 /*background-color: #282c34;*/
 .App-content {
-  background-color: #fff;
+  background-color: var(--white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,15 +30,15 @@ a {
 }
 
 .App-title {
-  color: #282c34;
+  color: var(--black);
 }
 
 .App-title span {
-  color: #ff13a7;
+  color: var(--giffy);
 }
 
 .App-category {
-  color: #ff13a7;
+  color: var(--giffy);
   margin-bottom: 25px;
   width: 100%;
 }

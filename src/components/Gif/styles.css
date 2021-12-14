@@ -12,7 +12,7 @@
 }
 
 .Gif-link {
-  color: #000;
+  color: var(--black);
   display: block;
   text-decoration: none;
   position: relative;
@@ -23,7 +23,7 @@
   background: rgba(0, 0, 0, .3);
   bottom: 0;
   font-size: 0.75rem;
-  color: #fff;
+  color: var(--white);
   margin: 0;
   position: absolute;
 }
@@ -92,11 +92,11 @@ i {
 }
 .Gif:hover:nth-child(5n + 3) h4 {
 	background-color: var(--brand-color_3);
-	color: white;
+	color: var(--white);
 }
 .Gif:hover:nth-child(5n + 4) h4 {
 	background-color: var(--brand-color_4);
-	color: white;
+	color: var(--white);
 }
 .Gif:hover:nth-child(5n + 5) h4 {
 	background-color: var(--brand-color_5);
