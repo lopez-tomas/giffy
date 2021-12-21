@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation } from 'wouter'
 
 import ListOfGifs from 'components/ListOfGifs/index'
@@ -10,10 +10,10 @@ const Home = () => {
 	const [path, pushLocation] = useLocation()
 	const { loading, gifs } = useGifs()
 
-	const handleSubmit = ({ keyword }) => {
+	const handleSubmit = useCallback(({ keyword }) => {
 		// go to other route
 		pushLocation(`/search/${keyword}`)
-	}
+	}, [pushLocation])
 
 	return (
 		<>
@@ -28,7 +28,6 @@ const Home = () => {
 			<div className="App-category">
 				<TrendingSearches />
 			</div>
-
 		</>
 	)
 }
