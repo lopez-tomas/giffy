@@ -2,8 +2,9 @@ import React, { Suspense } from 'react'
 import { Route, Link } from 'wouter'
 import './App.css';
 
-import SearchResults from 'pages/SearchResults/index'
-import Detail from 'pages/Detail/index'
+import SearchResults from 'pages/SearchResults'
+import Detail from 'pages/Detail'
+import Error404 from 'pages/404'
 import StaticContext from 'context/StaticContext'
 import { GifsContextProvider } from 'context/GifsContext'
 
@@ -36,6 +37,10 @@ function App() {
               <Route
                 path="/gif/:id"
                 component={Detail}
+              />
+              <Route
+                path="/404"
+                component={Error404}
               />
             </GifsContextProvider>
             </section>
