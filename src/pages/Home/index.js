@@ -20,6 +20,7 @@ const Home = () => {
 		<>
 			<Helmet>
 				<title>Home | Giffy</title>
+				<link rel="canonical" href="https://giffy-lopez-tomas.vercel.app" />
 			</Helmet>
 			<SearchForm onSubmit={handleSubmit} />
 			<div className="App-main">
