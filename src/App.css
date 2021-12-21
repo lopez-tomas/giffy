@@ -42,3 +42,7 @@ a {
   margin-bottom: 25px;
   width: 100%;
 }
+
+.App-error {
+  color: var(--black);
+}
